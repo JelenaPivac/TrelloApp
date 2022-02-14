@@ -1,0 +1,21 @@
+.card{
+    background-color: white;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+}
+
+.name{
+    position: absolute;
+    left:15px;
+}
+
+.svg-inline--fa{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: #696969;
+    cursor: pointer;
+}

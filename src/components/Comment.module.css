@@ -1,0 +1,9 @@
+.comment{
+    display: flex;
+    flex-direction: column;
+    min-height: 30px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 5px;
+}

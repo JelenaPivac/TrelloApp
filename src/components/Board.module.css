@@ -1,0 +1,106 @@
+.board{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    overflow-y:scroll;
+}
+.nameBack{
+display: flex;
+justify-content: space-between;
+margin-bottom: 35px;
+}
+.nw{
+    display: flex;
+}
+.nameBoard{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: hsla(0,0%,100%,0.24);
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.workSpace{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: hsla(0,0%,100%,0.24);
+    border-radius: 8px;
+}
+.back{
+ text-decoration: none;
+ font-size: 25px;
+ color: #fff;
+}
+.content{
+    display: flex;
+    overflow-x:scroll;
+    
+}
+
+.addList{
+    background-color: hsla(0,0%,100%,0.24);
+    border-radius:8px;
+    border:#fff solid 2px;
+    color:#fff;
+    min-width: 350px;
+    padding: 15px;
+    height: 58px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.svg-inline--fa {
+    margin-right: 10px;
+}
+
+.inputFieldList{
+    display: flex;
+    flex-direction: column;
+    background-color: #e8e8e8;
+    height: fit-content;
+    width: 350px;
+    padding: 15px;
+    border-radius: 8px;
+    border: #fff solid 2px;
+    min-width: 350px;
+}
+
+.inputListName{
+    height: 36px;
+    border-radius: 6px;
+    border: #0079bf solid 2px;
+    padding: 10px;
+}
+
+.addListBtn{
+    background-color:#0079bf;
+    color: #fff;
+    border-radius: 4px;
+    border:none;
+    font-size: 14px;
+    font-weight: 400px;
+    padding: 10px;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.addRemoveList{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.addRemoveList .svg-inline--fa{
+    margin-left: 10px;
+    color: #696969;
+    font-size: 25px;
+    cursor: pointer;
+}
