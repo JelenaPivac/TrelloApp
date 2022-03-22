@@ -23,7 +23,7 @@ const List = (props) => {
   let hoverDiv = (
     <div
       className={classes.card}
-      key="dfoisdhofsacnxasdjkfnakhrbjh12p3j12ln3"
+      key="hovering"
     ></div>
   );
   const ref = useRef(null);
@@ -58,12 +58,12 @@ const List = (props) => {
     }),
     drop: (item) => {
       let c = cards.find((x) => x.key === item.key);
-      if (c != null && c.length != 0) {
+      if (c != null && c.length !== 0) {
         let sortedCards = [];
         for (let i = 0; i < cards.length; i++)
-          if (c.key != cards[i].key) sortedCards.push(cards[i]);
+          if (c.key !== cards[i].key) sortedCards.push(cards[i]);
 
-        sortedCards = sortedCards.filter((x) => x.key != hoverDiv.key);
+        sortedCards = sortedCards.filter((x) => x.key !== hoverDiv.key);
         sortedCards.splice(dragIndex, 0, c);
         setNewPositionOnCard(sortedCards, c.key);
         setCards(sortedCards);
@@ -86,7 +86,7 @@ const List = (props) => {
         ></Card>
       );
 
-      let newCards = cards.filter((x) => x.key != hoverDiv.key);
+      let newCards = cards.filter((x) => x.key !== hoverDiv.key);
       newCards.splice(dragIndex, 0, newCard);
       setCards(newCards);
       setNewPositionOnCard(newCards, newCard.key);
@@ -94,7 +94,7 @@ const List = (props) => {
     },
     hover: (item, monitor) => {
       if (!ref.current) {
-        var filteredCards = cards.filter((x) => x.key != hoverDiv);
+        var filteredCards = cards.filter((x) => x.key !== hoverDiv);
         setCards(filteredCards);
         return;
       }
@@ -107,8 +107,8 @@ const List = (props) => {
 
       dragIndex = Math.floor(hoverY / cardHeight);
       let newCards = [];
-      if (cards.find((x) => x.key == hoverDiv.key)) {
-        newCards = cards.filter((x) => x.key != hoverDiv.key);
+      if (cards.find((x) => x.key === hoverDiv.key)) {
+        newCards = cards.filter((x) => x.key !== hoverDiv.key);
       } else {
         newCards = cards;
       }
@@ -118,7 +118,7 @@ const List = (props) => {
   });
 
   if (!isOver && hasCards && isHovering) {
-    var newCards = cards.filter((x) => x.key != hoverDiv.key);
+    var newCards = cards.filter((x) => x.key !== hoverDiv.key);
     setCards(newCards);
     setIsHovering(false);
   }
@@ -142,7 +142,7 @@ const List = (props) => {
     });
   };
   const deleteListHandler = () => {
-    deleteAList(props.id).then((x) => props.updateParent());
+    deleteAList(props.id).then(() => props.updateParent());
   };
   const changeNameHandler = (event) => {
     setInputName(event.target.value);

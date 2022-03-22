@@ -38,7 +38,7 @@ const Modal = (props) => {
   };
 
   const createBoardHandler = () => {
-    createBoard(inputName, selectedColor).then((x) => {
+    createBoard(inputName, selectedColor).then(() => {
       props.updateParent();
       props.close();
     });

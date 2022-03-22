@@ -15,7 +15,7 @@ export const BoardPage = () => {
         setData(boardData);
         setDataAvailable(true);
       });
-  }, []);
+  },[]);
 
   return (
     <div className={classes.boardPage}>

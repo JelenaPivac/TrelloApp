@@ -44,19 +44,19 @@ const Modal = (props) => {
     setInputComment(event.target.value);
   };
   const addANewCommentHandler = () => {
-    addANewComment(props.data.id, inputComment).then((x) =>
+    addANewComment(props.data.id, inputComment).then(() =>
       setNeedsUpdate(true)
     );
     setInputComment("");
   };
 
   const nameSubmitHandler = () => {
-    updateNameOnCard(props.data.id, inputName).then((x) =>
+    updateNameOnCard(props.data.id, inputName).then(() =>
       props.updateParent()
     );
   };
   const descSubmitHandler = () => {
-    updateDescOnCard(props.data.id, inputDesc).then((x) =>
+    updateDescOnCard(props.data.id, inputDesc).then(() =>
       props.updateParent()
     );
   };

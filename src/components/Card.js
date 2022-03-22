@@ -11,7 +11,7 @@ const Card = (props) => {
 
   const deleteCardHandler = (e) => {
     e.stopPropagation();
-    deleteACard(data.id).then((x) => props.updateParent());
+    deleteACard(data.id).then(() => props.updateParent());
   };
 
   const showDetailedCardHandler = () => {
